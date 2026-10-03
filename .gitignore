@@ -1,0 +1,5 @@
+# herdr release binary downloaded by the Reproduce steps
+/herdr
+__pycache__/
+*.pyc
+.DS_Store

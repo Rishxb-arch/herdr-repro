@@ -1,0 +1,20 @@
+#!/usr/bin/env python3
+# Fake "claude" for herdr detection tests: prints static screens that mimic Claude Code UI text
+# which the bundled claude manifest keys on. Scenario is read from $FAKE_SCENARIO_FILE each 0.3s.
+import os, sys, time
+SC = os.environ.get("FAKE_SCENARIO_FILE", "/tmp/herdr-fake-scenario")
+W = int(os.environ.get("COLUMNS", "100"))
+rule = "─" * 60
+screens = {
+ "working": f"● Reading files\n\n✻ Thinking… (12s · ↑ 1.2k tokens · esc to interrupt)\n\n{rule}\n❯ \n{rule}\n  ⏵⏵ accept edits on (shift+tab to cycle)\n",
+ "idle": f"● Done. I updated the file.\n\n{rule}\n❯ \n{rule}\n  ? for shortcuts\n",
+ "blocked": f"● Bash(rm -rf build)\n\n{rule}\n Bash command\n\n   rm -rf build\n   Remove build dir\n\n Do you want to proceed?\n ❯ 1. Yes\n   2. Yes, and don't ask again for rm commands in /tmp\n   3. No, and tell Claude what to do differently (esc)\n",
+}
+last=None
+print("\x1b[?1049h", end="")
+while True:
+    try: s=open(SC).read().strip()
+    except Exception: s="idle"
+    if s!=last:
+        print("\x1b[2J\x1b[H"+screens.get(s,screens["idle"]), end="", flush=True); last=s
+    time.sleep(0.3)

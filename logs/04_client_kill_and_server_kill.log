@@ -1,0 +1,4 @@
+agent pid before: 1580042
+after killing the client: agent pid=1580042  herdr says: claude idle
+after SIGKILL of server: agent pid='' (empty = agent died with the server)
+after restart: panes=1, first pane agent: None unknown

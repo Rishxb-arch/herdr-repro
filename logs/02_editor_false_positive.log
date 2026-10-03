@@ -1,0 +1,15 @@
+before:                      None unknown
+while editor is open:        cursor idle
+agent list: [('w1:p1', 'cursor', 'idle')]
+agent: cursor
+state: idle
+manifest: remote:/tmp/herdr-repro.84wpr7/.state/herdr/agent-detection/remote/cursor.toml 2026.08.03.1
+rule: none
+fallback_reason: default_known_agent_idle_fallback
+after editor closed:         None unknown
+--- other names herdr maps to agents (each is a copy of /bin/sleep renamed) ---
+foreground 'kilo': kilo unknown
+foreground 'amp': amp unknown
+foreground 'antigravity': agy unknown
+foreground 'grok': grok unknown
+foreground 'droid': droid unknown

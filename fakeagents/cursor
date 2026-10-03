@@ -1,0 +1,8 @@
+#!/usr/bin/env python3
+# Stand-in for the Cursor *editor* launcher used as `git config core.editor "cursor --wait"`.
+# Not an agent: it blocks until $FAKE_RELEASE_FILE exists, then writes a commit message into the file git gave it.
+import sys, time, os
+target = [a for a in sys.argv[1:] if not a.startswith("-")][-1]
+release = os.environ.get("FAKE_RELEASE_FILE", "/tmp/herdr-fake-release")
+while not os.path.exists(release): time.sleep(0.2)
+open(target, "w").write("edited in fake editor\n")

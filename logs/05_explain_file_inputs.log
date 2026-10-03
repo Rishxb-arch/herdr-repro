@@ -1,0 +1,12 @@
+empty.txt --agent claude: rc=0 {"agent":"claude","cached_remote_version":"2026.09.11.1","evaluated_rules":[{"evidence":{"all_count":0,"any_co
+empty.txt --agent nosuch: rc=0 {"agent":"nosuch","cached_remote_version":null,"evaluated_rules":[],"fallback_reason":"unknown_agent","local_o
+ansi.txt --agent claude: rc=0 {"agent":"claude","cached_remote_version":"2026.09.11.1","evaluated_rules":[{"evidence":{"all_count":0,"any_co
+ansi.txt --agent nosuch: rc=0 {"agent":"nosuch","cached_remote_version":null,"evaluated_rules":[],"fallback_reason":"unknown_agent","local_o
+huge.txt --agent claude: rc=0 {"agent":"claude","cached_remote_version":"2026.09.11.1","evaluated_rules":[{"evidence":{"all_count":0,"any_co
+huge.txt --agent nosuch: rc=0 {"agent":"nosuch","cached_remote_version":null,"evaluated_rules":[],"fallback_reason":"unknown_agent","local_o
+badutf.txt --agent claude: rc=1 {"id":"cli:agent:explain","error":{"code":"agent_explain_file_read_failed","message":"failed to read agent exp
+badutf.txt --agent nosuch: rc=1 {"id":"cli:agent:explain","error":{"code":"agent_explain_file_read_failed","message":"failed to read agent exp
+rand.bin --agent claude: rc=1 {"id":"cli:agent:explain","error":{"code":"agent_explain_file_read_failed","message":"failed to read agent exp
+rand.bin --agent nosuch: rc=1 {"id":"cli:agent:explain","error":{"code":"agent_explain_file_read_failed","message":"failed to read agent exp
+missing.txt --agent claude: rc=1 {"id":"cli:agent:explain","error":{"code":"agent_explain_file_read_failed","message":"failed to read agent exp
+missing.txt --agent nosuch: rc=1 {"id":"cli:agent:explain","error":{"code":"agent_explain_file_read_failed","message":"failed to read agent exp

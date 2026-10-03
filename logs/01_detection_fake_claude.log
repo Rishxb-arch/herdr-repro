@@ -1,0 +1,8 @@
+scenario=working  herdr says: claude working
+scenario=blocked  herdr says: claude blocked
+scenario=idle  herdr says: claude idle
+agent: claude
+state: idle
+manifest: remote:/tmp/herdr-repro.CrjZ3P/.state/herdr/agent-detection/remote/claude.toml 2026.09.11.1
+rule: live_prompt_box (region=prompt_box_body priority=950)
+evidence: "❯\n"
