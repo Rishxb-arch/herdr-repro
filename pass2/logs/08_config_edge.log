@@ -1,0 +1,17 @@
+herdr 0.9.3
+--- empty (exit=0): config: ok 
+--- truncated (exit=1): config: issues found config parse error: TOML parse error at line 1, column 8   | 1 | ui = [   |        ^ invalid array expected `]` ; using defaults 
+--- unknown_key (exit=1): config: issues found unknown config key ui.nonexistent; ignoring key 
+--- wrong_type (exit=1): config: issues found config parse error: TOML parse error at line 2, column 17   | 2 | confirm_close = "yes"   |                 ^^^^^ invalid type: string "yes", expected a boolean ; using defaults 
+--- negative (exit=1): config: issues found config parse error: TOML parse error at line 2, column 26   | 2 | scrollback_limit_bytes = -5   |                          ^^ invalid value: integer `-5`, expected usize ; using d
+--- overflow (exit=1): config: issues found config parse error: TOML parse error at line 2, column 26   | 2 | scrollback_limit_bytes = 99999999999999999999   |                          ^ number too large to fit in target ty
+--- dup_key (exit=1): config: issues found config parse error: TOML parse error at line 3, column 1   | 3 | confirm_close = false   | ^ duplicate key `confirm_close` in table `ui` ; using defaults 
+--- bad_keybind (exit=1): config: issues found unknown config key keys.split_right; ignoring key 
+--- key_conflict (exit=1): config: issues found ctrl+b: kept keys.prefix, disabled keys.split_vertical 
+--- bom (exit=0): config: ok 
+--- crlf (exit=0): config: ok 
+--- bad_sound (exit=1): config: issues found unsupported sound file format: ui.sound.path = /nonexistent resolves to /nonexistent; expected an mp3 file; using default sound 
+scripts/08_config_edge.sh: line 5: warning: command substitution: ignored null byte in input
+--- nul_byte (exit=1): config: issues found config parse error: TOML parse error at line 3, column 1   | 3 |    | ^ invalid key ; using defaults 
+--- invalid_utf8 (exit=1): config: issues found config read error: stream did not contain valid UTF-8; using defaults 
+--- huge_value (exit=1): config: issues found unknown config key ui.name; ignoring key 

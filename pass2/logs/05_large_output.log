@@ -1,0 +1,9 @@
+herdr 0.9.3
+start RSS: 18.918 MB
+lines        rc=0  1.9s  RSS=29.5195 MB
+giantline    rc=0  0.5s  RSS=29.5273 MB
+binary       rc=0  2.1s  RSS=21.0234 MB
+lines2       rc=0  0.3s  RSS=21.4531 MB
+api latency after: 5 ms; RSS=21.0078 MB
+box@grok-bot-vm-63499534:~$
+scrollback_limit_bytes default = 10000000 (10 MB) per pane

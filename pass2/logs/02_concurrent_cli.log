@@ -1,0 +1,27 @@
+herdr 0.9.3
+ws=w1 root=w1:p1
+splits ok=30 / 30
+unique ids returned: 30 of 30
+pane list count: 31 (expected 31)
+close results:
+     30 "type":"ok"
+split-during-close results:
+     10 "type":"pane_info"
+final panes: 11
+workspaces: 16 (expected 16)
+tabs in w1: 16
+workspace ids unique: 16
+--- server log panics/errors:
+2026-10-04T01:43:36.042633Z  WARN herdr::app::actions: PaneDied for unknown pane pane=18
+2026-10-04T01:43:36.061655Z  WARN herdr::app::actions: PaneDied for unknown pane pane=14
+2026-10-04T01:43:36.065607Z  WARN herdr::app::actions: PaneDied for unknown pane pane=19
+2026-10-04T01:43:36.068742Z  WARN herdr::app::actions: PaneDied for unknown pane pane=13
+2026-10-04T01:43:36.071637Z  WARN herdr::app::actions: PaneDied for unknown pane pane=9
+2026-10-04T01:43:36.074165Z  WARN herdr::app::actions: PaneDied for unknown pane pane=11
+2026-10-04T01:43:36.076559Z  WARN herdr::app::actions: PaneDied for unknown pane pane=29
+2026-10-04T01:43:36.079068Z  WARN herdr::app::actions: PaneDied for unknown pane pane=30
+2026-10-04T01:43:36.082160Z  WARN herdr::app::actions: PaneDied for unknown pane pane=21
+2026-10-04T01:43:36.084920Z  WARN herdr::app::actions: PaneDied for unknown pane pane=7
+status: running
+version: 0.9.3
+endpoint_compatible: yes

@@ -2,6 +2,10 @@
 
 Small, honest test pass on [herdr](https://github.com/herdrdev/herdr) v0.9.3 (released 2026-09-29; source read at `5da0a01e`, the head of the default branch `master` on 2026-10-03), run on 2026-10-03 on a headless Linux x86_64 box with no GPU, no Docker and no real coding-agent CLIs installed. Everything here uses the official release binary (`herdr-linux-x86_64`, sha256 `18a8dc65f1c2fa485884344356dea1cfd911c6f06cf46fa78e193f4087f4dba7`) in a throwaway `$HOME`.
 
+## Second pass (4 Oct 2026)
+
+agent prompt does not neutralise an embedded bracketed-paste terminator (ESC[201~); see [pass2/FINDINGS.md](pass2/FINDINGS.md) and [pass2/scripts/07_paste_breakout.sh](pass2/scripts/07_paste_breakout.sh). Tested only with a fake agent; impact is inference.
+
 ## The one real finding (minor): agents are recognised by process name alone, with no opt-out
 
 herdr decides "this pane is running an agent" from the foreground process name (`src/detect/mod.rs`, `lookup_agent`). Several of those names are also ordinary programs. The most realistic case is the Cursor editor: the standard way to use it for commit messages is `git config core.editor "cursor --wait"`, and `cursor` maps to the Cursor agent. While `git commit` waits for the editor, the pane is reported as a `cursor` agent in state `idle`:

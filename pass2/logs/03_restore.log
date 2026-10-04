@@ -1,0 +1,19 @@
+herdr 0.9.3
+## before
+[('w1', 'alpha', 3, 2), ('w2', 'beta ünï 日本', 1, 1)]
+[('w1:t1', '1', 2), ('w1:t2', 'tab two', 1), ('w2:t1', '1', 1)]
+[('w1:p1', '$T/dirA', None), ('w1:p2', '$T/dirB', 'my pane 🚀'), ('w1:p3', '$T/dirA', None), ('w2:p1', '$T/dir with space', None)]
+'3000\nSCROLLBACK_MARK\n[1] 1817276\nstarted\nbox@grok-bot-vm-63499534:~/dirA$\n'
+server pid 1817171 alive after stop: no
+## after graceful stop+restart
+[('w1', 'alpha', 3, 2), ('w2', 'beta ünï 日本', 1, 1)]
+[('w1:t1', '1', 2), ('w1:t2', 'tab two', 1), ('w2:t1', '1', 1)]
+[('w1:p1', '$T/dirA', None), ('w1:p2', '$T/dirB', 'my pane 🚀'), ('w1:p3', '$T/dirA', None), ('w2:p1', '$T/dir with space', None)]
+'box@grok-bot-vm-63499534:~/dirA$\n'
+'box@grok-bot-vm-63499534:~/dirA$ echo FOO=$FOO; jobs; pwd\nFOO=\n/tmp/herdr-p2-03.fGXbNL/dirA\nbox@grok-bot-vm-63499534:~/dirA$\n'
+scripts/03_restore.sh: line 29: 1817345 Killed                  herdr server > /dev/null 2>&1
+## after kill -9 + restart
+[('w1', 'alpha', 3, 2), ('w2', 'beta ünï 日本', 1, 1)]
+[('w1:t1', '1', 2), ('w1:t2', 'tab two', 1), ('w2:t1', '1', 1)]
+[('w1:p1', '$T/dirA', None), ('w1:p2', '$T/dirB', 'my pane 🚀'), ('w1:p3', '$T/dirA', None), ('w2:p1', '$T/dir with space', None)]
+'box@grok-bot-vm-63499534:~/dirA$\n'

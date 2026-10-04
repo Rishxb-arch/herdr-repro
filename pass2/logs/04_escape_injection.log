@@ -1,0 +1,3 @@
+herdr 0.9.3
+raw bytes captured: 10029
+done; any 'PANE'/'WS'/'TAB' text drawn: [b'WS', b'TAB', b'OSCTITLE']

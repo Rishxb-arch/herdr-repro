@@ -1,0 +1,21 @@
+herdr 0.9.3
+agent status after start: idle
+{"id":"cli:agent:list","result":{"agents":[{"agent":"claude","agent_status":"idle","cwd":"/tmp/herdr-p2-06.OzAHBK","focused":true,"foreground_cwd":"/tmp/herdr-p2-06.OzAHBK","pane_id":"w1:p1","revision":0,"state_change_seq":1,"tab_id":"w1:t1","terminal_id":"term_65cfa0ba6c8be1","workspace_id":"w1"}],"type":"agent_list"}}
+
+[plain] rc=0 2.6s result={"id":"cli:agent:prompt","result":{"agent":{"agent":"claude","agent_status":"idle","completion_seq":3,"cwd":"/tmp/herdr-p2-06.OzAHBK","focused":true,"foreground
+[unicode] rc=0 2.4s result={"id":"cli:agent:prompt","result":{"agent":{"agent":"claude","agent_status":"idle","completion_seq":5,"cwd":"/tmp/herdr-p2-06.OzAHBK","focused":true,"foreground
+[multiline] rc=0 2.4s result={"id":"cli:agent:prompt","result":{"agent":{"agent":"claude","agent_status":"idle","completion_seq":7,"cwd":"/tmp/herdr-p2-06.OzAHBK","focused":true,"foreground
+[dashes] rc=0 2.6s result={"id":"cli:agent:prompt","result":{"agent":{"agent":"claude","agent_status":"idle","completion_seq":9,"cwd":"/tmp/herdr-p2-06.OzAHBK","focused":true,"foreground
+[quotes] rc=0 2.4s result={"id":"cli:agent:prompt","result":{"agent":{"agent":"claude","agent_status":"idle","completion_seq":11,"cwd":"/tmp/herdr-p2-06.OzAHBK","focused":true,"foregroun
+[trailing_ws] rc=0 2.4s result={"id":"cli:agent:prompt","result":{"agent":{"agent":"claude","agent_status":"idle","completion_seq":13,"cwd":"/tmp/herdr-p2-06.OzAHBK","focused":true,"foregroun
+[big] rc=0 2.7s result={"id":"cli:agent:prompt","result":{"agent":{"agent":"claude","agent_status":"idle","completion_seq":15,"cwd":"/tmp/herdr-p2-06.OzAHBK","focused":true,"foregroun
+[escseq] rc=0 2.4s result={"id":"cli:agent:prompt","result":{"agent":{"agent":"claude","agent_status":"idle","completion_seq":17,"cwd":"/tmp/herdr-p2-06.OzAHBK","focused":true,"foregroun
+--- received by fake agent (repr), lengths for big:
+11 'hello world'
+18 '日本語 é 🚀 👨\u200d👩\u200d👧\u200d👦 ok'
+18 'line1\nline2\n\nline4'
+19 '--help -x -- /model'
+27 'it\'s "quoted" $HOME `id` \\n'
+19 'trailing spaces   \t'
+30000 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+15 'esc\x1b[31mred\x1b[0m'
